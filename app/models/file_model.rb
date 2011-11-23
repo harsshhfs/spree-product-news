@@ -44,7 +44,7 @@ class FileModel
 #    return @@files if @@files
     @@files = Dir["#{content_path}/*.txt"].sort_by {|f| self.get_date(f) }
     bases = @@files.collect {|i| self.get_date(i)}
-    puts "FILES    #{bases.join('  ')}"
+    #puts "FILES    #{bases.join('  ')}"
     @@files
   end
 

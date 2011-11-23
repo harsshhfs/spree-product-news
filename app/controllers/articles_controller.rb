@@ -39,7 +39,7 @@ class ArticlesController < Spree::BaseController
         name.strip!
         prods = Product.where(["name LIKE ?", "%#{name}%"]).limit(1).first
         @products << prods if prods 
-        puts "Adding Product #{prods ? prods.name : 'No product'}  FOR #{name}"  
+        #puts "Adding Product #{prods ? prods.name : 'No product'}  FOR #{name}"  
       end
     end
     if @article.image
