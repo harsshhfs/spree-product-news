@@ -37,7 +37,7 @@ class ArticlesController < Spree::BaseController
       parts = @article.product_name.split(',')
       parts.each do |name| 
         name.strip!
-        prods = Product.where(["name LIKE ?", "%#{name}%"]).limit(1).first
+        prods = Spree::Product.where(["name LIKE ?", "%#{name}%"]).limit(1).first
         @products << prods if prods 
         #puts "Adding Product #{prods ? prods.name : 'No product'}  FOR #{name}"  
       end

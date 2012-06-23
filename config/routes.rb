@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Spree::Core::Engine.routes.draw do
 
   match '/news',                              :to => 'articles#index',   :as => 'news_articles'
   match '/news.:format',                      :to => 'articles#index',   :as => 'news_articles'

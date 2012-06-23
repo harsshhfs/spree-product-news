@@ -7,7 +7,7 @@ module ProductNewsExtension
         helper ArticlesHelper
       end
 
-      AppConfiguration.class_eval do
+      Spree::AppConfiguration.class_eval do
         preference :news_feed_url, :default => '/news.xml'
       end
 
