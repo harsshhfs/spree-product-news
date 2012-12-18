@@ -11,6 +11,12 @@ module ProductNewsExtension
         preference :news_feed_url, :default => '/news.xml'
       end
 
+      Deface::Override.new(:virtual_path => "admin/orders/show",
+                           :name => "converted_admin_order_show_addresses_971422162",
+                           :insert_before => "[data-hook='admin_order_show_addresses'], #admin_order_show_addresses[data-hook]",
+                           :partial => "admin/orders/admin_name",
+                           :disabled => false)
+                           
     end
 
 
