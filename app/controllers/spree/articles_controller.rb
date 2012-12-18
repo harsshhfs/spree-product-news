@@ -1,3 +1,4 @@
+module Spree
 class ArticlesController < Spree::BaseController
   rescue_from  Errno::ENOENT, :with => :render_404
   
@@ -46,5 +47,5 @@ class ArticlesController < Spree::BaseController
       @image = @article.image
     end
   end
-  
+end
 end
